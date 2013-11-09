@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tr5-QD-kiG">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5jH-Iu-whp">
+            <objects>
+                <viewController id="tr5-QD-kiG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gSx-rR-xrY"/>
+                        <viewControllerLayoutGuide type="bottom" id="EEa-2c-Mwg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yaf-Bh-pe7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSb-Ch-4bH">
+                                <rect key="frame" x="144" y="252" width="33" height="30"/>
+                                <state key="normal" title="login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="l2v-pn-bGj" kind="modal" id="TmD-v0-sY9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bSb-Ch-4bH" firstAttribute="centerX" secondItem="yaf-Bh-pe7" secondAttribute="centerX" id="B25-aU-HI5"/>
+                            <constraint firstItem="bSb-Ch-4bH" firstAttribute="top" secondItem="yaf-Bh-pe7" secondAttribute="top" constant="252" id="KYA-vq-9Ov"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DuO-5a-z9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717" y="268"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1sQ-PY-shr">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="l2v-pn-bGj" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="vbd-fh-xlD">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2DH-9P-qcF" kind="relationship" relationship="viewControllers" id="Hbf-Fe-55m"/>
+                        <segue destination="PHT-nH-Bt3" kind="relationship" relationship="viewControllers" id="d3n-hy-fgx"/>
+                        <segue destination="CBL-3a-mDb" kind="relationship" relationship="viewControllers" id="xPh-eL-efH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oeL-Vc-eSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-336" y="268"/>
+        </scene>
+        <!--View Controller - マイページ-->
+        <scene sceneID="r06-yI-JTn">
+            <objects>
+                <viewController id="SGa-BM-f7p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I0l-iK-dLF"/>
+                        <viewControllerLayoutGuide type="bottom" id="t3M-m8-FhM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UKV-Vy-zNT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="マイページ" id="14I-Rm-Wgq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKI-8z-v4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329" y="972"/>
+        </scene>
+        <!--Table View Controller - くじ情報一覧-->
+        <scene sceneID="zy4-D5-YlO">
+            <objects>
+                <tableViewController id="hNT-wI-XQl" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UC2-zW-7NB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5vc-SI-nDo">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5vc-SI-nDo" id="AUn-Oe-Itd">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="くじ情報一覧" id="fhT-p4-mYh">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="v0p-Bg-j4Q">
+                            <connections>
+                                <segue destination="SGa-BM-f7p" kind="push" id="y20-Vg-GV8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNk-5h-CRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="581"/>
+        </scene>
+        <!--Table View Controller - ニュース-->
+        <scene sceneID="S0f-92-lp3">
+            <objects>
+                <tableViewController id="Dkk-4p-3Mf" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rEf-a2-FgE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vfP-AT-SKt">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vfP-AT-SKt" id="XUi-Mg-FZ7">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ニュース" id="vfp-lz-vZI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="eMu-td-OhJ">
+                            <connections>
+                                <segue destination="SGa-BM-f7p" kind="push" id="Q35-FF-WrH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QX4-km-Qqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="1237"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="D17-gS-uCV">
+            <objects>
+                <viewController id="1Ml-zz-ILg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Izm-Dh-cAB"/>
+                        <viewControllerLayoutGuide type="bottom" id="CX6-MW-Nmy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eVD-uH-1vO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLI-vJ-Gez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="1237"/>
+        </scene>
+        <!--Expect View Controller - 予想する-->
+        <scene sceneID="9qS-lH-GeZ">
+            <objects>
+                <viewController title="予想する" id="A3F-eA-sPc" customClass="ExpectViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3b-W8-tch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-68"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xM4-dl-YnA">
+            <objects>
+                <viewController id="hwU-d6-XcH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyh-Q9-KD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="581"/>
+        </scene>
+        <!--Navigation Controller - ニュース-->
+        <scene sceneID="tJc-b1-dvH">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="CBL-3a-mDb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ニュース" id="TJ9-N5-06I"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JPv-rq-Bmd">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Dkk-4p-3Mf" kind="relationship" relationship="rootViewController" id="Xc7-zE-X4L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Hz-tm-Kas" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="1237"/>
+        </scene>
+        <!--Navigation Controller - 予想を見る-->
+        <scene sceneID="kJT-gq-odw">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="PHT-nH-Bt3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="予想を見る" id="GWU-aV-ILl"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ccg-Id-GXu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hNT-wI-XQl" kind="relationship" relationship="rootViewController" id="L9O-6f-6mm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMG-aw-WkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="581"/>
+        </scene>
+        <!--Expect Hold View Controller - くじ情報一覧-->
+        <scene sceneID="FOr-gc-aDF">
+            <objects>
+                <tableViewController id="waG-il-VEY" customClass="ExpectHoldViewController" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DTa-pN-TXw" colorLabel="IBBuiltInLabel-Red">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="くじ情報一覧" id="pZz-dy-zFc">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Lc8-pq-qYO">
+                            <connections>
+                                <segue destination="SGa-BM-f7p" kind="push" id="yU1-F3-CuK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGH-E9-IyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="-68"/>
+        </scene>
+        <!--Navigation Controller - 予想する-->
+        <scene sceneID="oh6-5d-moE">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="2DH-9P-qcF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="予想する" id="xr9-sp-wNN"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lkg-eC-53l">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="waG-il-VEY" kind="relationship" relationship="rootViewController" id="g91-13-VAA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8Q-sx-lkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="-68"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="yU1-F3-CuK"/>
+    </inferredMetricsTieBreakers>
+</document>
